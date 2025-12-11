@@ -83,13 +83,14 @@ export const DemoSection: React.FC = () => {
 
         {/* Progress Stepper */}
         <div className="flex justify-between max-w-3xl mx-auto mb-16 relative reveal-on-scroll reveal-delay-100">
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -z-10" />
+          {/* Aligned top-5 to center with 40px circles (h-10) */}
+          <div className="absolute top-5 left-0 w-full h-[1px] bg-white/10 -z-10" />
           {['Pick', 'Invest', 'Compete', 'Win'].map((label, idx) => (
-            <div key={label} className="flex flex-col items-center gap-3 bg-[#050505] px-4 z-10">
+            <div key={label} className="flex flex-col items-center gap-3 z-10">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-500
                 ${step >= idx 
                   ? 'border-[#f24455] bg-[#f24455] text-white shadow-[0_0_15px_rgba(242,68,85,0.4)]' 
-                  : 'border-neutral-800 bg-neutral-900 text-neutral-600'}`}>
+                  : 'border-neutral-800 bg-[#050505] text-neutral-600'}`}>
                 {idx + 1}
               </div>
               <span className={`text-xs font-medium uppercase tracking-wider ${step >= idx ? 'text-white' : 'text-neutral-600'}`}>{label}</span>
