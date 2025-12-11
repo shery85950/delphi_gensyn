@@ -72,7 +72,7 @@ export const DemoSection: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#f24455] rounded-full mix-blend-screen filter blur-[150px] opacity-[0.07] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
+        <div className="text-center mb-16 max-w-2xl mx-auto reveal-on-scroll">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
             See How It <span className="gradient-text">Works</span>
           </h2>
@@ -82,7 +82,7 @@ export const DemoSection: React.FC = () => {
         </div>
 
         {/* Progress Stepper */}
-        <div className="flex justify-between max-w-3xl mx-auto mb-16 relative">
+        <div className="flex justify-between max-w-3xl mx-auto mb-16 relative reveal-on-scroll reveal-delay-100">
           <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -z-10" />
           {['Pick', 'Invest', 'Compete', 'Win'].map((label, idx) => (
             <div key={label} className="flex flex-col items-center gap-3 bg-[#050505] px-4 z-10">
@@ -98,7 +98,7 @@ export const DemoSection: React.FC = () => {
         </div>
 
         {/* Game Container */}
-        <div className="glass-panel rounded-3xl p-6 md:p-12 min-h-[500px] flex flex-col items-center justify-center transition-all duration-500 max-w-5xl mx-auto border-t border-white/10 shadow-2xl shadow-black/50">
+        <div className="reveal-on-scroll reveal-delay-200 glass-panel rounded-3xl p-6 md:p-12 min-h-[500px] flex flex-col items-center justify-center transition-all duration-500 max-w-5xl mx-auto border-t border-white/10 shadow-2xl shadow-black/50">
           
           {/* STEP 1: SELECT */}
           {step === DemoStep.SELECT && (

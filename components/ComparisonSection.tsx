@@ -5,7 +5,7 @@ export const ComparisonSection: React.FC = () => {
   return (
     <section className="py-24 bg-[#050505] relative z-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal-on-scroll">
           <span className="text-[#f24455] font-semibold tracking-wider text-xs uppercase bg-[#f24455]/10 px-3 py-1 rounded-full border border-[#f24455]/20">The Concept</span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mt-6">
             Like the Stock Market, <br />
@@ -15,7 +15,7 @@ export const ComparisonSection: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Traditional Market */}
-          <div className="group relative p-8 rounded-3xl bg-[#0f0f0f] border border-white/5 hover:border-white/10 transition-colors">
+          <div className="reveal-on-scroll reveal-delay-100 group relative p-8 rounded-3xl bg-[#0f0f0f] border border-white/5 hover:border-white/10 transition-colors">
             <div className="absolute top-0 left-0 w-full h-1 bg-neutral-800 rounded-t-3xl opacity-50" />
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-neutral-900 rounded-xl border border-white/5">
@@ -43,7 +43,7 @@ export const ComparisonSection: React.FC = () => {
           </div>
 
           {/* Delphi Market */}
-          <div className="group relative p-8 rounded-3xl glass-panel hover:shadow-[0_0_40px_rgba(242,68,85,0.1)] transition-all duration-500 border border-[#f24455]/20">
+          <div className="reveal-on-scroll reveal-delay-200 group relative p-8 rounded-3xl glass-panel hover:shadow-[0_0_40px_rgba(242,68,85,0.1)] transition-all duration-500 border border-[#f24455]/20">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#f24455] to-[#660f24] rounded-t-3xl" />
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-[#f24455]/10 rounded-xl border border-[#f24455]/20 shadow-[0_0_15px_rgba(242,68,85,0.1)]">
