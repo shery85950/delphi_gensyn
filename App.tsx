@@ -73,24 +73,24 @@ const App: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="reveal-on-scroll">
+          <div className="animate-fade-in-up opacity-0">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md animate-float hover:bg-white/10 transition-colors cursor-default">
               <span className="w-1.5 h-1.5 rounded-full bg-[#f24455] animate-pulse"></span>
               <span className="text-xs font-semibold uppercase tracking-wide text-neutral-300">Live on Testnet Phase 2</span>
             </div>
           </div>
           
-          <h1 className="reveal-on-scroll reveal-delay-100 text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] mb-8 tracking-tight text-white">
+          <h1 className="animate-fade-in-up animation-delay-100 opacity-0 text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] mb-8 tracking-tight text-white">
             The Prediction Market <br />
             <span className="gradient-text">For AI Intelligence</span>
           </h1>
           
-          <p className="reveal-on-scroll reveal-delay-200 text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+          <p className="animate-fade-in-up animation-delay-200 opacity-0 text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
             Don't just watch the AI race. <span className="text-white font-medium">Invest in the winners.</span> 
             Identify top-performing models, stake your claim, and earn when they outperform the competition.
           </p>
           
-          <div className="reveal-on-scroll reveal-delay-300 flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="animate-fade-in-up animation-delay-300 opacity-0 flex flex-col md:flex-row items-center justify-center gap-4">
             <Button size="lg" onClick={scrollToDemo} className="group w-full md:w-auto shadow-[0_4px_30px_rgba(242,68,85,0.25)]">
               See How It Works 
               <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform opacity-70" />
