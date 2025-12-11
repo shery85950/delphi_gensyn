@@ -17,56 +17,56 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen font-sans selection:bg-[#f24455] selection:text-white">
+    <main className="min-h-screen font-sans selection:bg-[#f24455] selection:text-white relative">
       
       {/* Navigation */}
-      <nav className="fixed w-full z-50 backdrop-blur-md border-b border-white/5 bg-[#050505]/80">
+      <nav className="fixed w-full z-50 backdrop-blur-md border-b border-white/5 bg-[#050505]/70 supports-[backdrop-filter]:bg-[#050505]/30">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#f24455] to-[#660f24] flex items-center justify-center">
-              <span className="font-bold text-white">D</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#f24455] to-[#660f24] flex items-center justify-center shadow-[0_0_15px_rgba(242,68,85,0.3)]">
+              <span className="font-bold text-white font-display">D</span>
             </div>
-            <span className="font-display font-bold text-xl tracking-tight">Delphi</span>
+            <span className="font-display font-bold text-xl tracking-tight text-neutral-200">Delphi</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-sm text-neutral-400 hover:text-white transition-colors">How it works</a>
-            <a href="#features" className="text-sm text-neutral-400 hover:text-white transition-colors">Features</a>
-            <a href="#faq" className="text-sm text-neutral-400 hover:text-white transition-colors">FAQ</a>
+            <a href="#how-it-works" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">How it works</a>
+            <a href="#features" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Features</a>
+            <a href="#faq" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">FAQ</a>
           </div>
-          <Button size="sm" variant="outline">Launch App</Button>
+          <Button size="sm" variant="outline" className="border-white/10 hover:bg-white/5">Launch App</Button>
         </div>
       </nav>
 
       {/* Hero Section */}
       <header className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        {/* Background Gradients */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full opacity-30 pointer-events-none">
-           <div className="absolute top-20 left-20 w-72 h-72 bg-[#f24455] rounded-full filter blur-[100px] animate-pulse-slow" />
-           <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#660f24] rounded-full filter blur-[120px]" />
+        {/* Organic Background Blobs */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+           <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-[#f24455] rounded-full mix-blend-screen filter blur-[120px] opacity-[0.15] animate-float" />
+           <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-[#660f24] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.2] animate-float-delayed" />
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm animate-float">
-            <span className="w-2 h-2 rounded-full bg-[#f24455] animate-pulse"></span>
-            <span className="text-sm font-medium text-neutral-300">Live on Testnet Phase 2</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md animate-float hover:bg-white/10 transition-colors cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f24455] animate-pulse"></span>
+            <span className="text-xs font-semibold uppercase tracking-wide text-neutral-300">Live on Testnet Phase 2</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] mb-8 tracking-tight text-white">
             The Prediction Market <br />
             <span className="gradient-text">For AI Intelligence</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-neutral-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
             Don't just watch the AI race. <span className="text-white font-medium">Invest in the winners.</span> 
             Identify top-performing models, stake your claim, and earn when they outperform the competition.
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Button size="lg" onClick={scrollToDemo} className="group w-full md:w-auto">
+            <Button size="lg" onClick={scrollToDemo} className="group w-full md:w-auto shadow-[0_4px_30px_rgba(242,68,85,0.25)]">
               See How It Works 
-              <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform opacity-70" />
             </Button>
-            <Button size="lg" variant="secondary" className="w-full md:w-auto">
+            <Button size="lg" variant="secondary" className="w-full md:w-auto bg-[#1a1a1a] text-white border border-white/10 hover:bg-[#252525]">
               Read Whitepaper
             </Button>
           </div>
@@ -80,37 +80,37 @@ const App: React.FC = () => {
       <DemoSection />
 
       {/* Why It Matters */}
-      <section className="py-24 bg-[#080808] border-y border-white/5">
+      <section className="py-24 bg-[#080808]/50 border-y border-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold">Why Delphi Matters</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/5">
-              <div className="w-12 h-12 rounded-lg bg-[#f24455]/20 flex items-center justify-center mb-6">
+            <div className="group p-8 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 hover:border-[#f24455]/30 transition-all duration-500">
+              <div className="w-12 h-12 rounded-lg bg-[#f24455]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <ExternalLink className="w-6 h-6 text-[#f24455]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Transparent Evaluation</h3>
-              <p className="text-neutral-400">
+              <h3 className="text-xl font-bold mb-3 text-neutral-200">Transparent Evaluation</h3>
+              <p className="text-neutral-400 leading-relaxed">
                 Leaderboards can be gamed. Market prices cannot. We replace subjective rankings with efficient market dynamics.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/5">
-               <div className="w-12 h-12 rounded-lg bg-[#f24455]/20 flex items-center justify-center mb-6">
+            <div className="group p-8 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 hover:border-[#f24455]/30 transition-all duration-500">
+               <div className="w-12 h-12 rounded-lg bg-[#f24455]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <ExternalLink className="w-6 h-6 text-[#f24455]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Verifiable Results</h3>
-              <p className="text-neutral-400">
+              <h3 className="text-xl font-bold mb-3 text-neutral-200">Verifiable Results</h3>
+              <p className="text-neutral-400 leading-relaxed">
                 Powered by Gensyn's Verde system, every inference task is cryptographically verified on-chain.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/5">
-               <div className="w-12 h-12 rounded-lg bg-[#f24455]/20 flex items-center justify-center mb-6">
+            <div className="group p-8 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 hover:border-[#f24455]/30 transition-all duration-500">
+               <div className="w-12 h-12 rounded-lg bg-[#f24455]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <ExternalLink className="w-6 h-6 text-[#f24455]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Incentivized Truth</h3>
-              <p className="text-neutral-400">
+              <h3 className="text-xl font-bold mb-3 text-neutral-200">Incentivized Truth</h3>
+              <p className="text-neutral-400 leading-relaxed">
                 With real value at stake, the market converges on the truth faster than any centralized benchmark.
               </p>
             </div>
@@ -119,14 +119,14 @@ const App: React.FC = () => {
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="py-24">
-        <div className="container mx-auto px-4">
+      <section id="features" className="py-24 relative">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map((feature) => (
-              <div key={feature.id} className="group p-6 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:border-[#f24455]/50 transition-colors">
-                <feature.icon className="w-8 h-8 text-neutral-500 group-hover:text-[#f24455] mb-4 transition-colors" />
-                <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                <p className="text-sm text-neutral-400">{feature.description}</p>
+              <div key={feature.id} className="group p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-[#f24455]/40 transition-colors duration-300">
+                <feature.icon className="w-8 h-8 text-neutral-600 group-hover:text-[#f24455] mb-4 transition-colors duration-300" />
+                <h3 className="text-lg font-bold mb-2 text-neutral-200">{feature.title}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -136,21 +136,23 @@ const App: React.FC = () => {
       {/* FAQ */}
       <section id="faq" className="py-24 bg-[#0a0a0a]">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-display font-bold mb-12 text-center">Common Questions</h2>
+          <h2 className="text-3xl font-display font-bold mb-12 text-center text-neutral-200">Common Questions</h2>
           <div className="space-y-4">
             {FAQS.map((faq, index) => (
-              <div key={index} className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-900/30">
+              <div key={index} className="border border-white/5 rounded-2xl overflow-hidden bg-[#0f0f0f]">
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-white/[0.02] transition-colors"
                 >
-                  <span className="font-semibold text-lg">{faq.question}</span>
-                  {openFaq === index ? <Minus className="text-[#f24455]" /> : <Plus className="text-neutral-500" />}
+                  <span className="font-medium text-lg text-neutral-200">{faq.question}</span>
+                  {openFaq === index ? <Minus className="text-[#f24455]" /> : <Plus className="text-neutral-600" />}
                 </button>
                 <div 
-                  className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-40 p-6 pt-0' : 'max-h-0'}`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
                 >
-                  <p className="text-neutral-400">{faq.answer}</p>
+                  <div className="p-6 pt-0 text-neutral-400 leading-relaxed">
+                    {faq.answer}
+                  </div>
                 </div>
               </div>
             ))}
@@ -160,19 +162,19 @@ const App: React.FC = () => {
 
       {/* CTA */}
       <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#f24455]/10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#f24455]/10 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 text-white">
             Ready to <span className="gradient-text">Predict the Future?</span>
           </h2>
-          <p className="text-xl text-neutral-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Join thousands of others on the testnet. Identify the best models, build your portfolio, and prove your foresight.
           </p>
-          <div className="flex flex-col items-center gap-4">
-             <Button size="lg" className="px-12 py-5 text-lg shadow-[0_0_40px_rgba(242,68,85,0.3)]">
+          <div className="flex flex-col items-center gap-6">
+             <Button size="lg" className="px-12 py-5 text-lg shadow-[0_0_50px_rgba(242,68,85,0.25)] hover:shadow-[0_0_60px_rgba(242,68,85,0.4)]">
                 Launch Testnet App <ArrowRight className="ml-2" />
              </Button>
-             <span className="text-sm text-neutral-600 font-medium">
+             <span className="text-sm text-neutral-500 font-medium tracking-wide">
                Mainnet launching Q3 2025
              </span>
           </div>
@@ -180,16 +182,16 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/5 text-center md:text-left">
+      <footer className="py-12 border-t border-white/5 text-center md:text-left bg-[#050505]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-neutral-500 text-sm">
+            <div className="text-neutral-600 text-sm">
               © 2024 Delphi Protocol. Built on Gensyn.
             </div>
-            <div className="flex gap-6">
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors">Discord</a>
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors">Github</a>
+            <div className="flex gap-8">
+              <a href="#" className="text-neutral-500 hover:text-[#f24455] transition-colors text-sm font-medium">Twitter</a>
+              <a href="#" className="text-neutral-500 hover:text-[#f24455] transition-colors text-sm font-medium">Discord</a>
+              <a href="#" className="text-neutral-500 hover:text-[#f24455] transition-colors text-sm font-medium">Github</a>
             </div>
           </div>
         </div>
