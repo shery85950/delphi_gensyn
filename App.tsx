@@ -16,6 +16,10 @@ const App: React.FC = () => {
     document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openApp = () => {
+    window.open('https://delphi.gensyn.ai/market/0', '_blank');
+  };
+
   return (
     <main className="min-h-screen font-sans selection:bg-[#f24455] selection:text-white relative">
       
@@ -33,7 +37,7 @@ const App: React.FC = () => {
             <a href="#features" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Features</a>
             <a href="#faq" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">FAQ</a>
           </div>
-          <Button size="sm" variant="outline" className="border-white/10 hover:bg-white/5">Launch App</Button>
+          <Button size="sm" variant="outline" className="border-white/10 hover:bg-white/5" onClick={openApp}>Launch App</Button>
         </div>
       </nav>
 
@@ -66,7 +70,7 @@ const App: React.FC = () => {
               See How It Works 
               <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform opacity-70" />
             </Button>
-            <Button size="lg" variant="secondary" className="w-full md:w-auto bg-[#1a1a1a] text-white border border-white/10 hover:bg-[#252525]">
+            <Button size="lg" variant="secondary" className="w-full md:w-auto font-semibold">
               Read Whitepaper
             </Button>
           </div>
@@ -171,7 +175,7 @@ const App: React.FC = () => {
             Join thousands of others on the testnet. Identify the best models, build your portfolio, and prove your foresight.
           </p>
           <div className="flex flex-col items-center gap-6">
-             <Button size="lg" className="px-12 py-5 text-lg shadow-[0_0_50px_rgba(242,68,85,0.25)] hover:shadow-[0_0_60px_rgba(242,68,85,0.4)]">
+             <Button size="lg" className="px-12 py-5 text-lg shadow-[0_0_50px_rgba(242,68,85,0.25)] hover:shadow-[0_0_60px_rgba(242,68,85,0.4)]" onClick={openApp}>
                 Launch Testnet App <ArrowRight className="ml-2" />
              </Button>
              <span className="text-sm text-neutral-500 font-medium tracking-wide">
