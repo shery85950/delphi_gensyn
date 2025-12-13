@@ -204,7 +204,7 @@ const App: React.FC = () => {
                 Launch Testnet App <ArrowRight className="ml-2" />
              </Button>
              <span className="text-sm text-neutral-500 font-medium tracking-wide">
-               Mainnet launching Q3 2025
+               Mainnet launching Q1 2026
              </span>
           </div>
         </div>
